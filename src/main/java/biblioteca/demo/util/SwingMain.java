@@ -58,7 +58,7 @@ public class SwingMain {
 		
 		JButton btnNewButton = new JButton("BIENVENIDO A SOOPER ONLINE");
 		btnNewButton.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+			public void actionPerformed(ActionEvent e) { //esto es lo que crea el boton, se puede instalar en propietier shows events/
 				BibliotecaView biblioteca = new BibliotecaView();	}
 		});
 		frame.getContentPane().add(btnNewButton, BorderLayout.CENTER);
