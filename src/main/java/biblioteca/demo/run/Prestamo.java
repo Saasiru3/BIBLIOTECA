@@ -9,7 +9,7 @@ public class Prestamo {
 	private boolean disponible; //nuevo atrivuto para controlar si el libro esta disponible
 	
 	//Constructor
-	public Libro(int isbn, String titulo, String autor, int edicion) {
+	public void Libro() {
 		this.isbn = isbn;
 		this.titulo = titulo;
         this.autor = autor;
@@ -85,7 +85,7 @@ public class Prestamo {
 
     public static void main(String[] args) {
         // Crear un libro de ejemplo
-        Libro libro1 = new Libro(123456, "Universo",1 );
+        Libro libro1 = new Libro();
 
         // Mostrar la información del libro
         libro1.mostrarInfo();

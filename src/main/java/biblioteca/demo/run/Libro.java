@@ -38,6 +38,18 @@ public class Libro {
 										//la poner void no hace falta poner return
 		this.edicion = edicion; //asigna al atributo edicion el valor que le paso como argumento en la llamada al mentodo
 	}
+	public void mostrarInfo() {
+		// TODO Auto-generated method stub
+		
+	}
+	public void prestarLibro() {
+		// TODO Auto-generated method stub
+		
+	}
+	public void devolverLibro() {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	}
 	
