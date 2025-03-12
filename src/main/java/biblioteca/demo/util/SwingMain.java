@@ -33,11 +33,29 @@ public class SwingMain {
 				try {
 					SwingMain window = new SwingMain();
 					window.frame.setVisible(true);
-				} catch (Exception e) {
+					
+					//// Crear tres ventanas adicionales
+					window.crearventanas(3); // Cambié el número a 3 ventanas
+						
+					} catch (Exception e) {
 					e.printStackTrace(); //NOSONAR codigo autogenerado
 				}
 			}
 		});
+	}
+
+	protected void crearventanas(int i) {
+			// TODO Auto-generated method stub
+		//Introduzco implementación para abrir ventanas
+		int j;
+		for (int j1 = 0; j1< i; j1++) {
+			JFrame nuevaVentana = new JFrame("Ventana" + (j1+i));
+			nuevaVentana.setSize (300,200);
+			nuevaVentana.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+			nuevaVentana.setVisible(true);
+			
+		}
+		
 	}
 
 	/**
