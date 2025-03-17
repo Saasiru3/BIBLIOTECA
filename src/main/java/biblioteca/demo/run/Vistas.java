@@ -18,6 +18,7 @@ public class Vistas extends JFrame {
 	private JTextField textField_1;
 	private JTextField textField_2;
 	private JTextField textField_3;
+	private JTextField textField_4;
 
 	/**
 	 * Launch the application.
@@ -52,13 +53,13 @@ public class Vistas extends JFrame {
 		lblNewLabel.setBounds(146, 11, 144, 30);
 		contentPane.add(lblNewLabel);
 		
-		JLabel lblNewLabel_1 = new JLabel("Usuario");
+		JLabel lblNewLabel_1 = new JLabel("ID Usuario");
 		lblNewLabel_1.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblNewLabel_1.setBounds(23, 47, 87, 14);
 		contentPane.add(lblNewLabel_1);
 		
 		textField = new JTextField();
-		textField.setBounds(81, 46, 86, 20);
+		textField.setBounds(93, 46, 111, 20);
 		contentPane.add(textField);
 		textField.setColumns(10);
 		
@@ -71,7 +72,7 @@ public class Vistas extends JFrame {
 		lblNewLabel_2.setBounds(64, 94, 103, 14);
 		contentPane.add(lblNewLabel_2);
 		
-		JLabel lblNewLabel_3 = new JLabel("Devolucion");
+		JLabel lblNewLabel_3 = new JLabel("Devolución");
 		lblNewLabel_3.setFont(new Font("Tahoma", Font.PLAIN, 14));
 		lblNewLabel_3.setBounds(284, 96, 73, 14);
 		contentPane.add(lblNewLabel_3);
@@ -82,17 +83,17 @@ public class Vistas extends JFrame {
 		contentPane.add(lblNewLabel_4);
 		
 		textField_1 = new JTextField();
-		textField_1.setBounds(81, 131, 86, 20);
+		textField_1.setBounds(81, 131, 111, 20);
 		contentPane.add(textField_1);
 		textField_1.setColumns(10);
 		
 		JLabel lblNewLabel_5 = new JLabel("Isbn");
 		lblNewLabel_5.setFont(new Font("Tahoma", Font.PLAIN, 12));
-		lblNewLabel_5.setBounds(218, 131, 46, 14);
+		lblNewLabel_5.setBounds(202, 131, 62, 14);
 		contentPane.add(lblNewLabel_5);
 		
 		textField_2 = new JTextField();
-		textField_2.setBounds(271, 131, 86, 20);
+		textField_2.setBounds(285, 131, 111, 20);
 		contentPane.add(textField_2);
 		textField_2.setColumns(10);
 		
@@ -101,8 +102,17 @@ public class Vistas extends JFrame {
 		contentPane.add(lblNewLabel_6);
 		
 		textField_3 = new JTextField();
-		textField_3.setBounds(81, 170, 86, 20);
+		textField_3.setBounds(81, 170, 111, 20);
 		contentPane.add(textField_3);
 		textField_3.setColumns(10);
+		
+		JLabel lblNewLabel_7 = new JLabel("Titulo del Libro");
+		lblNewLabel_7.setBounds(202, 173, 73, 14);
+		contentPane.add(lblNewLabel_7);
+		
+		textField_4 = new JTextField();
+		textField_4.setBounds(284, 170, 112, 20);
+		contentPane.add(textField_4);
+		textField_4.setColumns(10);
 	}
 }
