@@ -45,7 +45,19 @@ public class Biblioteca extends JFrame {
 		contentPane.setLayout(null);
 		
 		JLabel lblNewLabel = new JLabel("   Biblioteca Municipal Lugones");
-		lblNewLabel.setBounds(94, 38, 155, 34);
+		lblNewLabel.setBounds(142, 24, 155, 34);
 		contentPane.add(lblNewLabel);
+		
+		JButton btnNewButton = new JButton("");
+		btnNewButton.setBounds(41, 161, 89, 23);
+		contentPane.add(btnNewButton);
+		
+		JButton btnNewButton_1 = new JButton("");
+		btnNewButton_1.setBounds(282, 161, 89, 23);
+		contentPane.add(btnNewButton_1);
+		
+		JLabel lblNewLabel_1 = new JLabel("Prestamo");
+		lblNewLabel_1.setBounds(48, 122, 82, 14);
+		contentPane.add(lblNewLabel_1);
 	}
 }
