@@ -9,7 +9,7 @@ import javax.swing.JPanel;
 
 public class SocioView {
 
-	protected JFrame frmSocio;
+	public JFrame frmSocio;
 	private JTextField textField;
 	private JTextField textField_1;
 	private JTextField textField_2;

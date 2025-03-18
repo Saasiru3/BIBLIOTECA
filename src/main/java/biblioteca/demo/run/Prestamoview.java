@@ -6,6 +6,8 @@ import javax.swing.JTabbedPane;
 import javax.swing.JTextField;
 import javax.swing.JLabel;
 import java.awt.Font;
+import java.awt.Window;
+
 import javax.swing.JButton;
 import java.awt.Color;
 import java.awt.event.ActionListener;
@@ -13,6 +15,7 @@ import java.awt.event.ActionEvent;
 
 public class Prestamoview {
 
+	public static Object frmPrestamo;
 	protected JFrame frmBiblioteca;
 	private JTextField textField;
 	private JTextField textField_1;
@@ -57,5 +60,9 @@ public class Prestamoview {
 			}
 		});
 		frmBiblioteca.getContentPane().add(btnNewButton_1);
+	}
+	public Window frmPrestamo() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

@@ -7,6 +7,8 @@ import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JTextField;
 import java.awt.Font;
+import java.awt.Window;
+
 import javax.swing.JPanel;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
@@ -14,7 +16,7 @@ import javax.swing.LayoutStyle.ComponentPlacement;
 
 public class LibroView {
 
-	protected JFrame frmSocio;
+	public JFrame frmLibro;
 	private JTextField textField;
 	private JTextField textField_2;
 	private JTextField textField_3;
@@ -26,7 +28,7 @@ public class LibroView {
 		initialize();
 	}
 	private void initialize () {
-		frmSocio = new JFrame();
+		frmLibro = new JFrame();
 		
 		JButton btnNewButton = new JButton("ISBN");
 		btnNewButton.setBounds(14, 7, 73, 31);
@@ -75,22 +77,26 @@ public class LibroView {
 		
 		JButton btnNewButton_1_2 = new JButton("MODIFICACION");
 		btnNewButton_1_2.setBounds(318, 231, 109, 23);
-		frmSocio.getContentPane().setLayout(null);
-		frmSocio.getContentPane().add(btnNewButton);
-		frmSocio.getContentPane().add(btnTitulo);
-		frmSocio.getContentPane().add(panel);
+		frmLibro.getContentPane().setLayout(null);
+		frmLibro.getContentPane().add(btnNewButton);
+		frmLibro.getContentPane().add(btnTitulo);
+		frmLibro.getContentPane().add(panel);
 		
 		JButton btnNewButton_2 = new JButton("AÑADIR");
 		btnNewButton_2.setBounds(7, 120, 71, 23);
-		frmSocio.getContentPane().add(btnNewButton_2);
-		frmSocio.getContentPane().add(textField_2);
-		frmSocio.getContentPane().add(textField_3);
-		frmSocio.getContentPane().add(textField_4);
-		frmSocio.getContentPane().add(textField_5);
-		frmSocio.getContentPane().add(textField);
-		frmSocio.getContentPane().add(textField_6);
-		frmSocio.getContentPane().add(btnNewButton_1);
-		frmSocio.getContentPane().add(btnNewButton_1_1);
-		frmSocio.getContentPane().add(btnNewButton_1_2);
+		frmLibro.getContentPane().add(btnNewButton_2);
+		frmLibro.getContentPane().add(textField_2);
+		frmLibro.getContentPane().add(textField_3);
+		frmLibro.getContentPane().add(textField_4);
+		frmLibro.getContentPane().add(textField_5);
+		frmLibro.getContentPane().add(textField);
+		frmLibro.getContentPane().add(textField_6);
+		frmLibro.getContentPane().add(btnNewButton_1);
+		frmLibro.getContentPane().add(btnNewButton_1_1);
+		frmLibro.getContentPane().add(btnNewButton_1_2);
+	}
+	public Window getFrame() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }

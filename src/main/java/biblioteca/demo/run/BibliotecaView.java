@@ -1,32 +1,32 @@
 package biblioteca.demo.run;
 
-import javax.swing.JFrame;
-import javax.swing.JLabel;
-import javax.swing.JButton;
-import net.miginfocom.swing.MigLayout;
-import java.awt.event.ActionListener;
-import java.awt.event.ActionEvent;
-import java.awt.Color;
-import java.awt.Window;
+import javax.swing.JFrame;		//importa la clase Jframe de Swing, para crear ventana
 
-public class BibliotecaView {
+import javax.swing.JLabel;		//Importa la clase JLabel, que se usa para etiquetas
+import javax.swing.JButton;		// Importar la clase JButton, para crear botones en la interface
+import java.awt.event.ActionListener;	//importa clase para manejar eventos generados por los botones cuando son presionados
+import java.awt.event.ActionEvent;		// lo mismo del anterior
+import java.awt.Color;					//importa la Clase color en este caso de los texto de botones
+import java.awt.Window;			//Importar la clase Window, para la ventana de la aplicacion
 
-	protected JFrame frmBiblioteca;
+public class BibliotecaView {	// es la clase principal define la vista de la biblioteca
+
+	protected JFrame frmBiblioteca;	//es un campo protegido de la ventana principal
 	
-	public BibliotecaView() {
+	public BibliotecaView() {	// Es el constructor, que llama al método initialize()
 		initialize();
 	}
-	private void initialize () {
+	private void initialize () {		//Es el metodo para configurar la ventana y sus componentes
 		frmBiblioteca = new JFrame();
 		
-		JButton btnSocios = new JButton("Gestion Socios\r\n");
-		btnSocios.setBounds(99, 23, 184, 44);
-		btnSocios.setForeground(new Color(0, 0, 255));
-		btnSocios.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
+		JButton btnSocios = new JButton("Gestion Socios\r\n");//Crea el boton
+		btnSocios.setBounds(99, 23, 184, 44);				// crea tamaño y posicion
+		btnSocios.setForeground(new Color(0, 0, 255));	// define color texto
+		btnSocios.addActionListener(new ActionListener() { // es un escuchador cuando apretamos el boton
+			public void actionPerformed(ActionEvent e) {// esta vacio, lo que significa que no hace nada cuando se pulsa el boton
 			}
 		});
-		frmBiblioteca.getContentPane().setLayout(null);
+		frmBiblioteca.getContentPane().setLayout(null); //
 		frmBiblioteca.getContentPane().add(btnSocios);
 		
 		JButton btnNewButton_1 = new JButton("Gestion de Libros");
@@ -47,8 +47,8 @@ public class BibliotecaView {
 		});
 		frmBiblioteca.getContentPane().add(btnNewButton_2);
 	}
-	public Window getFrame() {
+	public Window getFrame() {		//este metodo deberia devolver el objeto window pero esta incompleto
 		// TODO Auto-generated method stub
-		return null;
+		return null;			// deberia devolver frmBiblioteca o algun otro objeto relacionado
 	}
 }

@@ -1,30 +1,22 @@
 package biblioteca.demo.util;
 
-import biblioteca.demo.run.*;
-		
-import java.awt.EventQueue;
-import javax.swing.JFrame;
+import biblioteca.demo.run.BibliotecaView;
+import biblioteca.demo.run.LibroView;
+import biblioteca.demo.run.Prestamoview;
+import biblioteca.demo.run.SocioView;
 
-import javax.swing.BoxLayout;
+
+import java.awt.EventQueue;
+import java.awt.Window;
+
+import javax.swing.JFrame;
 import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-import biblioteca.demo.run.*;
-import java.awt.BorderLayout;
-import javax.swing.JTable;
-import javax.swing.JLabel;
-import java.awt.Color;
-import java.awt.Font;
 
 
-/**
- * Punto de entrada principal que incluye botones para la ejecucion de las pantallas 
- * de las aplicaciones de ejemplo
- * y acciones de inicializacion de la base de datos.
- * No sigue MVC pues es solamente temporal para que durante el desarrollo se tenga posibilidad
- * de realizar acciones de inicializacion
- */
+
 public class SwingMain {
 
 	private JFrame frame;
@@ -40,7 +32,7 @@ public class SwingMain {
 					window.frame.setVisible(true);
 					
 					//// Crear tres ventanas adicionales
-					window.crearventanas(3); // Cambié el número a 3 ventanas
+					window.crearventanas(1); // 
 						
 					} catch (Exception e) {
 					e.printStackTrace(); //NOSONAR codigo autogenerado
@@ -53,8 +45,8 @@ public class SwingMain {
 			// TODO Auto-generated method stub
 		//Introduzco implementación para abrir ventanas
 		int j;
-		for (int j1 = 0; j1< i; j1++) {
-			JFrame nuevaVentana = new JFrame("Ventana" + (j1+i));
+		for (int j1 = 0; j1 < i; j1++) {
+			JFrame nuevaVentana = new JFrame("Ventana" + (j1 + 1));
 			nuevaVentana.setSize (300,200);
 			nuevaVentana.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
 			nuevaVentana.setVisible(true);
@@ -80,33 +72,54 @@ public class SwingMain {
 		frame.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 		frame.getContentPane().setLayout(null);
 		
-		JButton btnNewButton = new JButton("BIENVENIDOS AL GESTOR DE LA BIBLIOTECA DE LUCONES");
+		JButton btnNewButton = new JButton("BIENVENIDOS AL GESTOR DE LA BIBLIOTECA DE LUGONES");
 		btnNewButton.setBounds(63, 89, 315, 23);
 		frame.getContentPane().add(btnNewButton);
 		
 		JButton btnNewButton_1 = new JButton("ENTRAR");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+			
+				frame.setVisible(false);
+				
+				abrirVentanaPrestamo();
+			
 			}
 		});
-		btnNewButton_1.setBounds(164, 158, 89, 23);
+		
+		btnNewButton_1.setBounds(164,158,89,23);
 		frame.getContentPane().add(btnNewButton_1);
-		
-		//Database db=new Database(); //creo la base de datos de prueba
-		
-//		db.createDatabase(false); //le paso el valor falso porque considero que no esta creada aun
-	//	db.loadDatabase(); //cargo datos de prueba
-		
-		// En btnNewButton le a corregido poniendo un 1
-		
-		JButton btnNewButton1 = new JButton("Bienvenido a la Biblioteca de Lugones");
-		btnNewButton1.addActionListener(new ActionListener() {
-			public void actionPerformed(ActionEvent e) {
-				BibliotecaView biblioteca = new BibliotecaView();
-				biblioteca.getFrame().setVisible(true);
-			}
-		});
 	}
-		
-	public JFrame getFrame() { return this.frame; }
-}
+		 private void abrirVentanaPrestamo() {
+		        Prestamoview prestamoView = new Prestamoview();
+		        ((Window) Prestamoview.frmPrestamo).setVisible(true);
+
+		        // Después de que la ventana de préstamo se haya mostrado, redirigimos a la ventana de libros
+		        prestamoView.frmPrestamo().addWindowListener(new java.awt.event.WindowAdapter() {
+		            public void windowClosing(java.awt.event.WindowEvent windowEvent) {
+		                abrirVentanaLibro();
+		            }
+		        });
+		    }
+
+		    private void abrirVentanaLibro() {
+		        LibroView libroView = new LibroView();
+		        libroView.frmLibro.setVisible(true);
+
+		        // Después de que la ventana de libros se haya mostrado, redirigimos a la ventana de socios
+		        libroView.getFrame().addWindowListener(new java.awt.event.WindowAdapter() {
+		            public void windowClosing(java.awt.event.WindowEvent windowEvent) {
+		                abrirVentanaSocio();
+		            }
+		        });
+		    }
+
+		    private void abrirVentanaSocio() {
+		        SocioView socioView = new SocioView();
+		        socioView.frmSocio.setVisible(true);
+		    }
+
+		    public JFrame getFrame() {
+		        return this.frame;
+		    }
+	}
