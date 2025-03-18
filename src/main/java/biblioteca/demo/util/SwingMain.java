@@ -1,4 +1,5 @@
 package biblioteca.demo.util;
+
 import biblioteca.demo.run.*;
 		
 import java.awt.EventQueue;
@@ -86,7 +87,6 @@ public class SwingMain {
 		JButton btnNewButton_1 = new JButton("ENTRAR");
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				BibliotecaView Biblioteca = new BibliotecaView();
 			}
 		});
 		btnNewButton_1.setBounds(164, 158, 89, 23);
@@ -96,14 +96,17 @@ public class SwingMain {
 		
 //		db.createDatabase(false); //le paso el valor falso porque considero que no esta creada aun
 	//	db.loadDatabase(); //cargo datos de prueba
-		JButton btnNewButton = new JButton ("Bienvenido a la Biblioteca de Lugones");
-		btnNewButton.addActionListener new actionListener() {
-			public void actionPerformed (ActionEvent e) {
-				BibliiotecaView biblioteca = new ibliotecaView();
-				biblioteca.getFrame().setVisisble(true);
+		
+		// En btnNewButton le a corregido poniendo un 1
+		
+		JButton btnNewButton1 = new JButton("Bienvenido a la Biblioteca de Lugones");
+		btnNewButton1.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				BibliotecaView biblioteca = new BibliotecaView();
+				biblioteca.getFrame().setVisible(true);
 			}
-		}!
-	
+		});
+	}
 		
 	public JFrame getFrame() { return this.frame; }
 }

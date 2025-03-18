@@ -7,6 +7,7 @@ import net.miginfocom.swing.MigLayout;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import java.awt.Color;
+import java.awt.Window;
 
 public class BibliotecaView {
 
@@ -45,5 +46,9 @@ public class BibliotecaView {
 			}
 		});
 		frmBiblioteca.getContentPane().add(btnNewButton_2);
+	}
+	public Window getFrame() {
+		// TODO Auto-generated method stub
+		return null;
 	}
 }
