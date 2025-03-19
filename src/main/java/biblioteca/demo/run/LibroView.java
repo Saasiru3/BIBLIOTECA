@@ -94,9 +94,7 @@ public class LibroView {
 		frmLibro.getContentPane().add(btnNewButton_1);
 		frmLibro.getContentPane().add(btnNewButton_1_1);
 		frmLibro.getContentPane().add(btnNewButton_1_2);
+		frmLibro.setVisible(true);
 	}
-	public Window getFrame() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 }

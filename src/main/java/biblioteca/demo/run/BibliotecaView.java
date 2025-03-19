@@ -18,12 +18,14 @@ public class BibliotecaView {	// es la clase principal define la vista de la bib
 	}
 	private void initialize () {		//Es el metodo para configurar la ventana y sus componentes
 		frmBiblioteca = new JFrame();
+		frmBiblioteca.setBounds(0, 0, 500, 500);
 		
 		JButton btnSocios = new JButton("Gestion Socios\r\n");//Crea el boton
 		btnSocios.setBounds(99, 23, 184, 44);				// crea tamaño y posicion
 		btnSocios.setForeground(new Color(0, 0, 255));	// define color texto
 		btnSocios.addActionListener(new ActionListener() { // es un escuchador cuando apretamos el boton
-			public void actionPerformed(ActionEvent e) {// esta vacio, lo que significa que no hace nada cuando se pulsa el boton
+			public void actionPerformed(ActionEvent e) {
+				SocioView gestionSocios = new SocioView();// esta vacio, lo que significa que no hace nada cuando se pulsa el boton
 			}
 		});
 		frmBiblioteca.getContentPane().setLayout(null); //
@@ -34,6 +36,7 @@ public class BibliotecaView {	// es la clase principal define la vista de la bib
 		btnNewButton_1.setForeground(new Color(0, 0, 255));
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				LibroView gestionLibros = new LibroView();
 			}
 		});
 		frmBiblioteca.getContentPane().add(btnNewButton_1);
@@ -43,12 +46,12 @@ public class BibliotecaView {	// es la clase principal define la vista de la bib
 		btnNewButton_2.setForeground(new Color(0, 0, 255));
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
+				PrestamoView gestionPrestamos = new PrestamoView();
 			}
 		});
 		frmBiblioteca.getContentPane().add(btnNewButton_2);
+		
+		frmBiblioteca.setVisible(true);
 	}
-	public Window getFrame() {		//este metodo deberia devolver el objeto window pero esta incompleto
-		// TODO Auto-generated method stub
-		return null;			// deberia devolver frmBiblioteca o algun otro objeto relacionado
-	}
+	
 }

@@ -87,5 +87,7 @@ public class SocioView {
 		
 		JButton btnNewButton_2 = new JButton("New button");
 		frmSocio.getContentPane().add(btnNewButton_2, "cell 4 6,alignx left,aligny top");
+		
+		frmSocio.setVisible(true);
 	}
 }

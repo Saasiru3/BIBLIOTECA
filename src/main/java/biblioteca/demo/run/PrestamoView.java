@@ -13,14 +13,14 @@ import java.awt.Color;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 
-public class Prestamoview {
+public class PrestamoView {
 
 	public static Object frmPrestamo;
 	protected JFrame frmBiblioteca;
 	private JTextField textField;
 	private JTextField textField_1;
 	
-	public Prestamoview() {
+	public PrestamoView() {
 		initialize();
 	}
 	private void initialize () {
@@ -60,9 +60,7 @@ public class Prestamoview {
 			}
 		});
 		frmBiblioteca.getContentPane().add(btnNewButton_1);
+		frmBiblioteca.setVisible(true);
 	}
-	public Window frmPrestamo() {
-		// TODO Auto-generated method stub
-		return null;
-	}
+	
 }
