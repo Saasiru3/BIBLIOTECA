@@ -2,39 +2,28 @@
 --(en este caso en cada aplicacion se usa solo una tabla, por lo que no hace falta)
 
 --Para giis.demo.tkrun:
-drop table pedido;
-drop table articulo;
-drop table contenedor;
-drop table articuloPedido;
+drop table Libro;
+drop table Prestamo;
+drop table Socio;
+;
 
 
-CREATE TABLE "contenedor" (
-	"idContenedor"	INTEGER NOT NULL,
-	"capacidad"	INTEGER NOT NULL,
-	"categoria"	TEXT NOT NULL,
-	PRIMARY KEY("idContenedor")
+CREATE TABLE "Libro" (
+	"ISBN"	INTEGER NOT NULL,
+	"Titulo"	TEXT NOT NULL,
+	"Autor"	TEXT NOT NULL,
+	"Edición"	INTEGER NOT NULL,
+	PRIMARY KEY("ISBN")
+);CREATE TABLE "Prestamo" (
+	"Libro"	INTEGER NOT NULL,
+	"Socio"	INTEGER NOT NULL,
+	"fecha/vecimiento"	INTEGER NOT NULL,
+	"fecha/Devolucion"	INTEGER
 );
-
-CREATE TABLE "articuloPedido" (
-	"articulo"	INTEGER NOT NULL,
-	"pedido"	INTEGER NOT NULL,
-	PRIMARY KEY("articulo","pedido"),
-	FOREIGN KEY("articulo") REFERENCES "producto"("idProducto")
+CREATE TABLE "Socio" (
+	"Field1"	INTEGER NOT NULL,
+	"Fecha_nacimiento"	TEXT NOT NULL,
+	"Nombre_Completo"	TEXT NOT NULL,
+	"Trabajador"	TEXT NOT NULL,
+	"mas_info"	INTEGER NOT NULL
 );
-
-CREATE TABLE "pedido" (
-	"idPedido"	INTEGER NOT NULL,
-	"numArticulos"	INTEGER NOT NULL,
-	PRIMARY KEY("idPedido" AUTOINCREMENT)
-);
-
-CREATE TABLE "articulo" (
-	"idArticulo"	INTEGER NOT NULL,
-	"volumen"	REAL NOT NULL,
-	"nombre"	TEXT NOT NULL,
-	"categoria"	TEXT NOT NULL,
-	PRIMARY KEY("idArticulo")
-);
-
-
-

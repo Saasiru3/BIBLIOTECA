@@ -35,6 +35,7 @@ public class SwingMain {
 					e.printStackTrace(); //NOSONAR codigo autogenerado
 				}
 			}
+			
 		});
 	}
 
@@ -59,11 +60,19 @@ public class SwingMain {
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				BibliotecaView biblioteca= new BibliotecaView();
+			
+				Database db=new Database();
+				
+				db.createDatabase(false);
+				db.loadDatabase();
 				
 				}
 		}
 		);
 		frame.getContentPane().add(btnNewButton, BorderLayout.CENTER);
-	}
+		
 		
 	}
+	public JFrame getFrame() { return this.frame; }
+}
+	
