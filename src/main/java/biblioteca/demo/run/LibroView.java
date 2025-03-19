@@ -31,11 +31,11 @@ public class LibroView {
 		frmLibro = new JFrame();
 		
 		JButton btnNewButton = new JButton("ISBN");
-		btnNewButton.setBounds(14, 7, 73, 31);
+		btnNewButton.setBounds(78, 7, 95, 31);
 		btnNewButton.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		
 		JButton btnTitulo = new JButton("TITULO");
-		btnTitulo.setBounds(209, 7, 95, 31);
+		btnTitulo.setBounds(241, 7, 128, 31);
 		btnTitulo.setFont(new Font("Tahoma", Font.PLAIN, 18));
 		btnTitulo.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
@@ -46,7 +46,7 @@ public class LibroView {
 		panel.setBounds(7, 45, 420, 46);
 		
 		textField_2 = new JTextField();
-		textField_2.setBounds(7, 150, 188, 20);
+		textField_2.setBounds(07, 150, 188, 20);
 		textField_2.setColumns(10);
 		
 		textField_3 = new JTextField();
@@ -70,20 +70,20 @@ public class LibroView {
 		textField_6.setColumns(10);
 		
 		JButton btnNewButton_1 = new JButton("ALTA");
-		btnNewButton_1.setBounds(30, 231, 57, 23);
+		btnNewButton_1.setBounds(7, 231, 75, 23);
 		
 		JButton btnNewButton_1_1 = new JButton("BAJA");
-		btnNewButton_1_1.setBounds(115, 231, 57, 23);
+		btnNewButton_1_1.setBounds(115, 231, 80, 23);
 		
 		JButton btnNewButton_1_2 = new JButton("MODIFICACION");
-		btnNewButton_1_2.setBounds(318, 231, 109, 23);
+		btnNewButton_1_2.setBounds(260, 231, 109, 23);
 		frmLibro.getContentPane().setLayout(null);
 		frmLibro.getContentPane().add(btnNewButton);
 		frmLibro.getContentPane().add(btnTitulo);
 		frmLibro.getContentPane().add(panel);
 		
 		JButton btnNewButton_2 = new JButton("AÑADIR");
-		btnNewButton_2.setBounds(7, 120, 71, 23);
+		btnNewButton_2.setBounds(7, 120, 89, 23);
 		frmLibro.getContentPane().add(btnNewButton_2);
 		frmLibro.getContentPane().add(textField_2);
 		frmLibro.getContentPane().add(textField_3);
