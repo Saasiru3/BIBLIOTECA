@@ -3,6 +3,9 @@ package biblioteca.demo.run;
 import javax.swing.JFrame;		//importa la clase Jframe de Swing, para crear ventana
 
 import javax.swing.JLabel;		//Importa la clase JLabel, que se usa para etiquetas
+
+import net.miginfocom.swing.MigLayout;
+
 import javax.swing.JButton;		// Importar la clase JButton, para crear botones en la interface
 import java.awt.event.ActionListener;	//importa clase para manejar eventos generados por los botones cuando son presionados
 import java.awt.event.ActionEvent;		// lo mismo del anterior
@@ -12,13 +15,17 @@ import java.awt.Window;			//Importar la clase Window, para la ventana de la apli
 public class BibliotecaView {	// es la clase principal define la vista de la biblioteca
 
 	protected JFrame frmBiblioteca;	//es un campo protegido de la ventana principal
+	private BibliotecaController controlador;
 	
-	public BibliotecaView() {	// Es el constructor, que llama al método initialize()
-		initialize();
+	public BibliotecaView(BibliotecaController controlador) {	// Es el constructor, que llama al método initialize()
+		initialize(controlador);
 	}
-	private void initialize () {		//Es el metodo para configurar la ventana y sus componentes
+	private void initialize (BibliotecaController controller) {		//Es el metodo para configurar la ventana y sus componentes
+		
 		frmBiblioteca = new JFrame();
+		frmBiblioteca.getContentPane().setLayout(new MigLayout("","[grow]", "[][][grow][][grow][]"));
 		frmBiblioteca.setBounds(0, 0, 500, 500);
+		this.controlador = controller; //aquí tengo vinculada la vista con el controlador que creo en el swinMain
 		
 		JButton btnSocios = new JButton("Gestion Socios\r\n");//Crea el boton
 		btnSocios.setBounds(99, 23, 184, 44);				// crea tamaño y posicion
@@ -52,6 +59,10 @@ public class BibliotecaView {	// es la clase principal define la vista de la bib
 		frmBiblioteca.getContentPane().add(btnNewButton_2);
 		
 		frmBiblioteca.setVisible(true);
+	}
+	public JFrame getFrame() {
+		// TODO Auto-generated method stub
+		return this.frmBiblioteca;
 	}
 	
 }

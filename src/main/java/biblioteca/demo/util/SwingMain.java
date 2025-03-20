@@ -1,5 +1,7 @@
 package biblioteca.demo.util;
 
+import biblioteca.demo.run.BibliotecaController;
+import biblioteca.demo.run.BibliotecaModel;
 import biblioteca.demo.run.BibliotecaView;
 import biblioteca.demo.run.LibroView;
 import biblioteca.demo.run.PrestamoView;
@@ -38,8 +40,6 @@ public class SwingMain {
 			
 		});
 	}
-
-
 	/**
 	 * Create the application.
 	 */
@@ -59,7 +59,8 @@ public class SwingMain {
 		JButton btnNewButton = new JButton("BIENVENIDO A LA BIBLIOTECA DE LUGONES");
 		btnNewButton.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				BibliotecaView biblioteca= new BibliotecaView();
+				BibliotecaController controller = new BibliotecaController();
+				controller.setVistaModel(new BibliotecaView(controller), new BibliotecaModel());
 			
 				Database db=new Database();
 				

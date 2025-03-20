@@ -8,6 +8,7 @@ public class BibliotecaController {
 public void setVistaModel(BibliotecaView v, BibliotecaModel m) {
 	this.model = m;
 	this.view = v;
+	//inicializacion de la vista
 	this.view.getFrame().setVisible(true);
 }
 }
