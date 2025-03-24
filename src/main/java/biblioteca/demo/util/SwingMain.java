@@ -53,25 +53,27 @@ public class SwingMain {
 	private void initialize() {
 		frame = new JFrame();
 		frame.setTitle("Main");
-		frame.setBounds(0, 0, 287, 185);
+		frame.setBounds(0,0, 287, 185);
 		frame.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 		
 		JButton btnNewButton = new JButton("BIENVENIDO A LA BIBLIOTECA DE LUGONES");
 		btnNewButton.addActionListener(new ActionListener() {
+				
 			public void actionPerformed(ActionEvent e) {
 				BibliotecaController controller = new BibliotecaController();
 				controller.setVistaModel(new BibliotecaView(controller), new BibliotecaModel());
 			
-				Database db=new Database();
 				
-				db.createDatabase(false);
-				db.loadDatabase();
 				
 				}
 		}
 		);
 		frame.getContentPane().add(btnNewButton, BorderLayout.CENTER);
 		
+		Database db=new Database();
+		
+		db.createDatabase(false);
+		db.loadDatabase();
 		
 	}
 	public JFrame getFrame() { return this.frame; }

@@ -12,21 +12,25 @@ CREATE TABLE "Libro" (
 	"ISBN"	INTEGER NOT NULL,
 	"Titulo"	TEXT NOT NULL,
 	"Autor"	TEXT NOT NULL,
-	"Edición"	INTEGER NOT NULL,
+	"Edicion"	INTEGER NOT NULL,
 	PRIMARY KEY("ISBN")
 );
 
 CREATE TABLE "Prestamo" (
 	"Libro"	INTEGER NOT NULL,
 	"Socio"	INTEGER NOT NULL,
-	"fecha/vecimiento"	INTEGER NOT NULL,
-	"fecha/Devolucion"	INTEGER
+	"fechaVencimiento"	INTEGER NOT NULL,
+	"fechaDevolucion"	INTEGER,
+	PRIMARY KEY("Libro")
+	
 );
 
 CREATE TABLE "Socio" (
 	"numSocio"	INTEGER NOT NULL,
-	"Fecha_nacimiento"	TEXT NOT NULL,
-	"Nombre_Completo"	TEXT NOT NULL,
-	"Trabajador"	TEXT NOT NULL,
-	"mas_info"	INTEGER NOT NULL
+	"FechaNacimiento"	TEXT NOT NULL,
+	"NombreCompleto"	TEXT NOT NULL,
+	"Trabajador"	INTEGER  NOT NULL,
+	"masInfo"	TEXT NOT NULL,
+	PRIMARY KEY("numSocio")
+	
 );

@@ -84,6 +84,10 @@ public class LibroView {
 		frmLibro.getContentPane().add(panel);
 		
 		JButton btnNewButton_2 = new JButton("AÑADIR");
+		btnNewButton_2.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+			}
+		});
 		btnNewButton_2.setBounds(7, 120, 89, 23);
 		frmLibro.getContentPane().add(btnNewButton_2);
 		frmLibro.getContentPane().add(textField_2);
