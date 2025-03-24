@@ -13,6 +13,7 @@ import javax.swing.JPanel;
 import javax.swing.GroupLayout;
 import javax.swing.GroupLayout.Alignment;
 import javax.swing.LayoutStyle.ComponentPlacement;
+import java.awt.Dimension;
 
 public class LibroView {
 
@@ -43,7 +44,7 @@ public class LibroView {
 		});
 		
 		JPanel panel = new JPanel();
-		panel.setBounds(7, 45, 420, 46);
+		panel.setBounds(7, 45, 20, 46);
 		
 		textField_2 = new JTextField();
 		textField_2.setBounds(07, 150, 188, 20);
