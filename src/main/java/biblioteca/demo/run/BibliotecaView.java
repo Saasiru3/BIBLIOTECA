@@ -33,6 +33,7 @@ public class BibliotecaView {	// es la clase principal define la vista de la bib
 		btnSocios.addActionListener(new ActionListener() { // es un escuchador cuando apretamos el boton
 			public void actionPerformed(ActionEvent e) {
 				SocioView gestionSocios = new SocioView();// esta vacio, lo que significa que no hace nada cuando se pulsa el boton
+				controller.AniadirGestionDeLibros(Integer.parseInt(textField.getText()));
 			}
 		});
 		frmBiblioteca.getContentPane().setLayout(null); //
@@ -44,6 +45,10 @@ public class BibliotecaView {	// es la clase principal define la vista de la bib
 		btnNewButton_1.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				LibroView gestionLibros = new LibroView();
+				
+		// añado controller.AniadirArticuloPedido(integer.parseInst(texField.getText()
+		//asociado al boton Gestion de Libros
+				controller.AniadirGestionDeLibros(Integer.parseInt(textField.getText()));
 			}
 		});
 		frmBiblioteca.getContentPane().add(btnNewButton_1);
@@ -54,6 +59,7 @@ public class BibliotecaView {	// es la clase principal define la vista de la bib
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				PrestamoView gestionPrestamos = new PrestamoView();
+				controller.AniadirGestionDeLibros(Integer.parseInt(textField.getText()));
 			}
 		});
 		frmBiblioteca.getContentPane().add(btnNewButton_2);
