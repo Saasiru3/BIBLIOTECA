@@ -3,6 +3,7 @@ package biblioteca.demo.util;
 import biblioteca.demo.run.BibliotecaController;
 import biblioteca.demo.run.BibliotecaModel;
 import biblioteca.demo.run.BibliotecaView;
+
 import biblioteca.demo.run.LibroView;
 import biblioteca.demo.run.PrestamoView;
 import biblioteca.demo.run.SocioView;
@@ -16,6 +17,7 @@ import javax.swing.JButton;
 import java.awt.event.ActionListener;
 import java.awt.event.ActionEvent;
 import javax.swing.JLabel;
+import javax.swing.ImageIcon;
 
 
 
@@ -53,29 +55,42 @@ public class SwingMain {
 	private void initialize() {
 		frame = new JFrame();
 		frame.setTitle("Main");
-		frame.setBounds(0,0, 287, 185);
+		frame.setBounds(0,0, 450, 300);
 		frame.setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 		
 		JButton btnNewButton = new JButton("BIENVENIDO A LA BIBLIOTECA DE LUGONES");
+		btnNewButton.setBounds(73, 11, 273, 84);
 		btnNewButton.addActionListener(new ActionListener() {
-				
-			public void actionPerformed(ActionEvent e) {
+			public void actionPerformed(ActionEvent e) { //la accion cuando apretamos el boton		
 				BibliotecaController controller = new BibliotecaController();
+				BibliotecaView vista = new BibliotecaView(controller);
+				BibliotecaModel modelo = new BibliotecaModel ();
+				
 				controller.setVistaModel(new BibliotecaView(controller), new BibliotecaModel());
-			
+			// intento asociar el boton Gestion libros
 				
+			//Aquí no sé si debería poner controller.setVistaModel(vista,modelo);
 				
-				}
+			}
 		}
 		);
-		frame.getContentPane().add(btnNewButton, BorderLayout.CENTER);
+		frame.getContentPane().setLayout(null);
+			
+				
+		frame.getContentPane().add(btnNewButton);
 		
-		Database db=new Database();
+		JLabel lblNewLabel = new JLabel("");
+		lblNewLabel.setIcon(new ImageIcon("C:\\Users\\LAUIR\\git\\63f70f6a8f204_360_202!.jpg"));
+		lblNewLabel.setBounds(32, 11, 697, 285);
+		frame.getContentPane().add(lblNewLabel);
 		
-		db.createDatabase(false);
-		db.loadDatabase();
+		Database db=new Database();//creo la base de datos de prueba
+		
+		db.createDatabase(false); //le paso valor falso porque no esta creada aun
+		db.loadDatabase(); //Cargo los datos de prueba
 		
 	}
-	public JFrame getFrame() { return this.frame; }
+	public JFrame getFrame() { return this.frame; } //es un getter de un objeto JFrame
+													//metodo cuando quieres acceder a atributos de una clase de manera controlada y segura
 }
 	
