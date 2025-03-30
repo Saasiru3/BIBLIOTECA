@@ -11,6 +11,7 @@ import java.awt.event.ActionEvent;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+import java.awt.Color;
 
 public class SocioView extends JFrame {
 	
@@ -35,6 +36,7 @@ public class SocioView extends JFrame {
 	}
 	private void initialize () {
 		frmSocio = new JFrame();
+		frmSocio.getContentPane().setBackground(new Color(215, 184, 9));
 		frmSocio.setBounds(0, 0, 500, 500); //configura la ventana, PARA QUE SE VEA COMPLETA
 		frmSocio.getContentPane().setLayout(new MigLayout("", "[71px][348px,grow]", "[][20px][14px][][grow][][]"));
 		
@@ -74,6 +76,23 @@ public class SocioView extends JFrame {
 		table = new JTable();
 		table.setModel(new DefaultTableModel(
 			new Object[][] {
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
 				{null},
 				{null},
 				{null},

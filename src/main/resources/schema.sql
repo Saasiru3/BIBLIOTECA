@@ -2,35 +2,32 @@
 --(en este caso en cada aplicacion se usa solo una tabla, por lo que no hace falta)
 
 --Para giis.demo.tkrun:
-drop table Libro;
-drop table Prestamo;
-drop table Socio;
+drop table if exists "Libro";
+drop table if exists "Prestamo";
+drop table if exists "Socios";
 
 
+CREATE TABLE IF NOT EXISTS "Socios" (
+	"Num_Socio"	INTEGER NOT NULL,
+	"NombreSocio" TEXT NOT NULL,
+	"Categoria"	TEXT NOT NULL,
+	PRIMARY KEY("Num_Socio")
+);
 
-CREATE TABLE "Libro" (
+CREATE TABLE IF NOT EXISTS "Libro" (
 	"ISBN"	INTEGER NOT NULL,
-	"Titulo"	TEXT NOT NULL,
+	"Titulo" TEXT NOT NULL,
 	"Autor"	TEXT NOT NULL,
-	"Edicion"	INTEGER NOT NULL,
+	"Anio_Edicion"	INTEGER,
 	PRIMARY KEY("ISBN")
 );
-
-CREATE TABLE "Prestamo" (
-	"Libro"	INTEGER NOT NULL,
-	"Socio"	INTEGER NOT NULL,
-	"fechaVencimiento"	INTEGER NOT NULL,
-	"fechaDevolucion"	INTEGER,
-	PRIMARY KEY("Libro")
-	
-);
-
-CREATE TABLE "Socio" (
-	"numSocio"	INTEGER NOT NULL,
-	"FechaNacimiento"	TEXT NOT NULL,
-	"NombreCompleto"	TEXT NOT NULL,
-	"Trabajador"	INTEGER  NOT NULL,
-	"masInfo"	TEXT NOT NULL,
-	PRIMARY KEY("numSocio")
-	
+CREATE TABLE IF NOT EXISTS "Prestamo" (
+	"Num_Socio"	INTEGER NOT NULL,
+	"ISBN"	INTEGER NOT NULL,
+	"Titulo" TEXT NOT NULL,
+	"Fecha_Inicio" TEXT NOT NULL,
+	"Fecha_Final" TEXT NOT NULL,
+	PRIMARY KEY("Num_Socio", "ISBN")
+	FOREIGN KEY("Num_Socio") REFERENCES "Socios"("Num_Socio"),
+	FOREIGN KEY("ISBN") REFERENCES "Libro"("ISBN")
 );

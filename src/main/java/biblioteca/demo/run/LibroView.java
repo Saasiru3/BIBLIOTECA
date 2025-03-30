@@ -19,6 +19,7 @@ import javax.swing.SwingConstants;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
+import java.awt.Color;
 
 public class LibroView extends JFrame { //corregido
 
@@ -33,6 +34,7 @@ public class LibroView extends JFrame { //corregido
 	}
 	private void initialize () {
 		frmLibro = new JFrame();
+		frmLibro.getContentPane().setBackground(new Color(57, 198, 166));
 		frmLibro.setBounds(0, 0, 500, 500); 
 		frmLibro.getContentPane().setLayout(new MigLayout("", "[grow][][grow][][][][][]", "[][][][][][grow][]"));
 		
@@ -74,6 +76,27 @@ public class LibroView extends JFrame { //corregido
 		table = new JTable();
 		table.setModel(new DefaultTableModel(
 			new Object[][] {
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
+				{null},
 				{null},
 				{null},
 				{null},

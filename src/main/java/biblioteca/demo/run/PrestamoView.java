@@ -32,8 +32,9 @@ public class PrestamoView extends JFrame {
 	}
 	private void initialize () {
 		frmPrestamo = new JFrame();
+		frmPrestamo.getContentPane().setBackground(new Color(0, 128, 255));
 		frmPrestamo.setBackground(new Color(6, 204, 140));
-		frmPrestamo.getContentPane().setForeground(new Color(0, 128, 64));
+		frmPrestamo.getContentPane().setForeground(new Color(0, 128, 255));
 		frmPrestamo.setBounds(0, 0, 500, 500);
 		frmPrestamo.getContentPane().setLayout(new MigLayout("", "[grow][grow][][][][grow][][][]", "[][][][][][grow][][][]"));
 		

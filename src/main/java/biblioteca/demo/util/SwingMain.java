@@ -69,7 +69,7 @@ public class SwingMain {
 				controller.setVistaModel(new BibliotecaView(controller), new BibliotecaModel());
 			// intento asociar el boton Gestion libros
 				
-			//Aquí no sé si debería poner controller.setVistaModel(vista,modelo);
+			
 				
 			}
 		}
